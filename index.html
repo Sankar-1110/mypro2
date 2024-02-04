@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Simple Form</title>
+  
+    <style>
+        *{
+            margin: 0%;
+        }
+        .main-box{
+        background-color: skyblue;
+        height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+    }
+       
+   
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        background-color: white;
+        border: 2px solid rgb(104, 150, 235);
+        padding: 60px 60px 80px 60px;
+        border-radius: 40px;
+    }
+    .but{
+        color: white;background-color: rgb(8, 83, 113);height: 40px;width: 200px
+    }
+    .but:hover{
+       background-color: rgb(7, 137, 189);
+    }
+    .form1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+    <div class="form">
+    <h1 style="color: black;">Sign in</h1>
+    <form class="form1" action="" method="post">
+        {% csrf_token %}
+        <p style="color: white;"for="name">Userame:</p>
+        <input style="color:black;border-radius: 40px;height: 40px;width: 250px;background-color:rgb(199, 232, 246);padding-left: 1cm;"placeholder="Enter username"type="text" id="username" name="username" required ><br>
+        <label style="color: white ;"for="marks">Password:</label>
+        <input style="color: black;border-radius: 40px;height: 40px;width: 250px;background-color: rgb(199, 232, 246);padding-left: 1cm;"type="password" id="password" name="password" placeholder="Password"required><br>
+        <div style="display:flex; justify-content: left;">
+        <a href="#"style="color: ;"   >forgot Password?</a>
+    </div><br>
+        <input class="but"style=";"type="submit" value="Login"><br>
+        <p>Don't have an account?<a href="#">Signup</a></p>
+    </form>
+</div>
+</div>
+</body>
+</html>
